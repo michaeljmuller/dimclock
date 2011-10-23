@@ -8,9 +8,6 @@
 
 #import "ClockViewController.h"
 
-// private SDK function -- needs /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/System/Library/PrivateFrameworks/GraphicsServices.framework
-void GSEventSetBacklightLevel(float newLevel); //The new level: 0.0 - 1.0.
-
 @implementation ClockViewController
 @synthesize time;
 @synthesize brightness;
@@ -82,7 +79,7 @@ void GSEventSetBacklightLevel(float newLevel); //The new level: 0.0 - 1.0.
 }
 
 - (IBAction)userTappedScreen {
-	GSEventSetBacklightLevel(1);
+	[UIScreen mainScreen].brightness = 1;
 	self.weatherView.alpha = 1;
 	self.brightness = 1;
     [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(dimSlightly) userInfo:nil repeats:NO]; 
@@ -101,7 +98,8 @@ void GSEventSetBacklightLevel(float newLevel); //The new level: 0.0 - 1.0.
 	self.brightness = (self.brightness < 0) ? 0 : self.brightness;
 	self.weatherView.alpha = self.brightness;
 
-	GSEventSetBacklightLevel(self.brightness);
+    [UIScreen mainScreen].brightness = self.brightness;
+	//GSEventSetBacklightLevel(self.brightness);
 	
 	if (self.brightness > 0) {
 		[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(dimSlightly) userInfo:nil repeats:NO]; 
@@ -122,7 +120,7 @@ void GSEventSetBacklightLevel(float newLevel); //The new level: 0.0 - 1.0.
 	[NSTimer scheduledTimerWithTimeInterval:(60*60) target:self selector:@selector(updateWeather) userInfo:nil repeats:NO]; 
 }
 
-- (void) asyncDownloadDidComplete:(AsynchonousDownload *)async {
+- (void) asyncDownloadDidComplete:(AsynchronousDownload *)async {
 	
 	WeatherDownload *w = (WeatherDownload *) async;
 	
@@ -141,7 +139,7 @@ void GSEventSetBacklightLevel(float newLevel); //The new level: 0.0 - 1.0.
 	self.weatherIconTwo.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", w.weatherIconTwo]];
 }
 
-- (void) asyncDownload:(AsynchonousDownload *)async didFailWithError:(NSError *)error {
+- (void) asyncDownload:(AsynchronousDownload *)async didFailWithError:(NSError *)error {
 }
 
 

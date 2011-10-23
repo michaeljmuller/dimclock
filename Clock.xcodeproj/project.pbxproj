@@ -64,7 +64,7 @@
 		A43095EA10A5430C000FD1E4 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = A43095B910A5430C000FD1E4 /* 8.png */; };
 		A43095EB10A5430C000FD1E4 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = A43095BA10A5430C000FD1E4 /* 9.png */; };
 		A43095EC10A5430C000FD1E4 /* na.png in Resources */ = {isa = PBXBuildFile; fileRef = A43095BB10A5430C000FD1E4 /* na.png */; };
-		A430960210A60A72000FD1E4 /* AsynchonousDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = A430960110A60A72000FD1E4 /* AsynchonousDownload.m */; };
+		A430960210A60A72000FD1E4 /* AsynchronousDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = A430960110A60A72000FD1E4 /* AsynchronousDownload.m */; };
 		A430960D10A60A9C000FD1E4 /* WeatherDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = A430960C10A60A9C000FD1E4 /* WeatherDownload.m */; };
 		A48E427710A3425300D4EC9C /* GraphicsServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48E427610A3425300D4EC9C /* GraphicsServices.framework */; };
 		A48E432610A35C3E00D4EC9C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = A48E432510A35C3E00D4EC9C /* Entitlements.plist */; };
@@ -135,8 +135,8 @@
 		A43095B910A5430C000FD1E4 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		A43095BA10A5430C000FD1E4 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		A43095BB10A5430C000FD1E4 /* na.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = na.png; sourceTree = "<group>"; };
-		A430960010A60A72000FD1E4 /* AsynchonousDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsynchonousDownload.h; sourceTree = "<group>"; };
-		A430960110A60A72000FD1E4 /* AsynchonousDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsynchonousDownload.m; sourceTree = "<group>"; };
+		A430960010A60A72000FD1E4 /* AsynchronousDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; path = AsynchronousDownload.h; sourceTree = "<group>"; };
+		A430960110A60A72000FD1E4 /* AsynchronousDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsynchronousDownload.m; sourceTree = "<group>"; };
 		A430960B10A60A9C000FD1E4 /* WeatherDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherDownload.h; sourceTree = "<group>"; };
 		A430960C10A60A9C000FD1E4 /* WeatherDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherDownload.m; sourceTree = "<group>"; };
 		A48E427610A3425300D4EC9C /* GraphicsServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsServices.framework; path = System/Library/PrivateFrameworks/GraphicsServices.framework; sourceTree = SDKROOT; };
@@ -167,8 +167,8 @@
 				1D3623250D0F684500981E51 /* ClockAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* ClockViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* ClockViewController.m */,
-				A430960010A60A72000FD1E4 /* AsynchonousDownload.h */,
-				A430960110A60A72000FD1E4 /* AsynchonousDownload.m */,
+				A430960010A60A72000FD1E4 /* AsynchronousDownload.h */,
+				A430960110A60A72000FD1E4 /* AsynchronousDownload.m */,
 				A430960B10A60A9C000FD1E4 /* WeatherDownload.h */,
 				A430960C10A60A9C000FD1E4 /* WeatherDownload.m */,
 			);
@@ -401,7 +401,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* ClockAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* ClockViewController.m in Sources */,
-				A430960210A60A72000FD1E4 /* AsynchonousDownload.m in Sources */,
+				A430960210A60A72000FD1E4 /* AsynchronousDownload.m in Sources */,
 				A430960D10A60A9C000FD1E4 /* WeatherDownload.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

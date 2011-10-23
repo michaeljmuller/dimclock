@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AsynchonousDownload.h"
+#import "AsynchronousDownload.h"
 
-@interface WeatherDownload : AsynchonousDownload {
+@interface WeatherDownload : AsynchronousDownload <NSXMLParserDelegate> {
 	NSString *sunrise;
 	NSString *sunset;
 	NSString *currentTemp;

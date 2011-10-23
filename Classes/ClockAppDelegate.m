@@ -28,7 +28,7 @@ void GSEventSetBacklightLevel(float newLevel); //The new level: 0.0 - 1.0.
 	UIApplication *thisApp = [UIApplication sharedApplication];
 
 	// hide the status bar at the top of the screen
-	[thisApp setStatusBarHidden:YES animated:NO];
+	[thisApp setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 	
 	// disable the auto-lock
 	thisApp.idleTimerDisabled = YES;
